@@ -51,14 +51,10 @@ const FilmInfo = () => {
             <h1>Additional information</h1>
             <ul>
               <li>
-                <NavLink to="cast" state={{ from: { location } }}>
-                  Cast
-                </NavLink>
+                <NavLink to="cast">Cast</NavLink>
               </li>
               <li>
-                <NavLink to="reviews" state={{ from: { location } }}>
-                  Rewiews
-                </NavLink>
+                <NavLink to="reviews">Rewiews</NavLink>
               </li>
             </ul>
           </div>
