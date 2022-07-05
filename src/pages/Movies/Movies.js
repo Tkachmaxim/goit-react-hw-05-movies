@@ -17,6 +17,7 @@ const Movies = () => {
   };
 
   const [_, setSearchParams] = useSearchParams();
+  console.log(_);
 
   useEffect(() => {
     if (!search) {
