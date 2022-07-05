@@ -1,0 +1,12 @@
+.link {
+    text-decoration: none;
+    margin-left: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.activeLink {
+    composes:link;
+    color : red;
+}

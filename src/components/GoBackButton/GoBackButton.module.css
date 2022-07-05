@@ -1,0 +1,22 @@
+.button {
+
+    border: none;
+    width: 100px;
+    height: 30px;
+    margin: 20px;
+}
+
+
+
+.button:after {
+  position: absolute;
+  top: 52px;
+  left: 30px;
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  transform: rotate(45deg);
+}
