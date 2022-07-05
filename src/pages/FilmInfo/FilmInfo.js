@@ -29,9 +29,6 @@ const FilmInfo = () => {
     setPath(pathName);
   }, [location.state]);
 
-  console.log(path);
-  console.log(location);
-
   useEffect(() => {
     fetchFilmInfo(filmId)
       .then(data => setFilmInfo(data))

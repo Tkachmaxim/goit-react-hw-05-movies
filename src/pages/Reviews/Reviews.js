@@ -9,7 +9,6 @@ const Reviews = () => {
   useEffect(() => {
     fetchReviews(filmId).then(({ results }) => setReviews(results));
   }, [filmId]);
-  console.log(reviews);
 
   return (
     <>
