@@ -1,4 +1,4 @@
-import { FilmList } from 'components/FilmList.js/FilmList';
+import { FilmList } from 'components/FilmList/FilmList';
 import { useEffect, useState } from 'react';
 import { fetchTrending } from '../../helpers/API';
 

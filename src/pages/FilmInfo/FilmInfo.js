@@ -24,10 +24,10 @@ const FilmInfo = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const pathName = location.state ? location.state.from.location : '/';
+    const pathName = location.state ? location.state.from.location : path;
 
     setPath(pathName);
-  }, [location.state]);
+  }, [location, path]);
 
   useEffect(() => {
     fetchFilmInfo(filmId)

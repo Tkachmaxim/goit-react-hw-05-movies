@@ -29,10 +29,15 @@ export { FilmCard };
 
 FilmCard.propTypes = {
   filmInfo: PropTypes.shape({
-    genres: PropTypes.array,
-    original_title: PropTypes.string,
-    poster_path: PropTypes.string,
-    popularity: PropTypes.number,
-    overview: PropTypes.string,
+    genres: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+      }).isRequired
+    ).isRequired,
+    original_title: PropTypes.string.isRequired,
+    poster_path: PropTypes.string.isRequired,
+    popularity: PropTypes.number.isRequired,
+    overview: PropTypes.string.isRequired,
   }),
 };

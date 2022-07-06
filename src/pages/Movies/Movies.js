@@ -2,30 +2,33 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { fetchFilmQuery } from 'helpers/API';
-import { FilmList } from 'components/FilmList.js/FilmList';
-
-//import s from './InputForm.module.css';
+import { FilmList } from 'components/FilmList/FilmList';
 
 const Movies = () => {
   const [film, setFilm] = useState('');
   const [queryResult, setQueryResult] = useState(null);
   const { search } = useLocation();
 
+  useEffect(() => {
+    if (search) {
+      setFilm(search.slice(7));
+    }
+  }, [search]);
+
   const onChangeForm = e => {
     const { value } = e.target;
     setFilm(value);
   };
 
-  const [_, setSearchParams] = useSearchParams();
-  console.log(_);
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
     if (!search) {
       return;
     }
-    const normilizedSearch = search.slice(7);
+    const normilizedSearch = searchParams.get('query');
     fetchFilmQuery(normilizedSearch).then(setQueryResult);
-  }, [search]);
+  }, [search, searchParams]);
 
   const onSubmitHandler = e => {
     e.preventDefault();

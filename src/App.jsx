@@ -1,11 +1,11 @@
-import Navigation from './Navigation/Navigation';
+import Navigation from './components/Navigation/Navigation';
 import { Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
-const Home = lazy(() => import('../pages/Home/Home'));
-const Movies = lazy(() => import('../pages/Movies/Movies'));
-const FilmInfo = lazy(() => import('../pages/FilmInfo/FilmInfo'));
-const NotFound = lazy(() => import('../pages/NotFound/NotFound'));
+const Home = lazy(() => import('./pages/Home/Home'));
+const Movies = lazy(() => import('./pages/Movies/Movies'));
+const FilmInfo = lazy(() => import('./pages/FilmInfo/FilmInfo'));
+const NotFound = lazy(() => import('./pages/NotFound/NotFound'));
 
 export const App = () => {
   return (
